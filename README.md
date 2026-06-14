@@ -110,44 +110,6 @@ Four regression models are trained and compared:
 
 ---
 
-## Results
-
-| Model | MAE | RMSE | R2 Score |
-|---|---|---|---|
-| Linear Regression | - | - | - |
-| Decision Tree | - | - | - |
-| Random Forest | - | - | - |
-| Gradient Boosting | - | - | - |
-
-Run the notebook to populate this table with your exact scores.
-
----
-
-## Understanding the Evaluation Metrics
-
-This is a regression task — we predict a continuous number (revenue in pounds). The metrics used are different from classification metrics.
-
-**MAE (Mean Absolute Error)**
-The average absolute difference between predicted and actual revenue, in pounds. An MAE of 30 means the model is wrong by 30 pounds on average. It treats all errors equally regardless of size.
-
-**RMSE (Root Mean Squared Error)**
-Like MAE, but squares each error before averaging and then takes the square root. Squaring means large errors are penalised disproportionately. RMSE is preferable when large prediction errors (e.g. badly misjudging a high-value order) are more costly to the business than many small errors. It is expressed in the same unit as revenue (pounds), making it interpretable to stakeholders.
-
-**R2 (R-squared / Coefficient of Determination)**
-The proportion of total revenue variance explained by the model. A value of 0.85 means 85% of what makes revenue vary across transactions is captured by the model. The remaining 15% is either random noise or information not present in the features.
-
-| R2 Range | Interpretation |
-|---|---|
-| Below 0.5 | Weak — barely better than always predicting the mean |
-| 0.5 to 0.7 | Moderate — directional signal but large errors remain |
-| 0.7 to 0.9 | Strong — suitable for business use |
-| Above 0.9 | Very strong — model captures nearly all systematic patterns |
-
-**Why not Precision, Recall, and F1?**
-Precision, Recall, and F1 are classification metrics. They measure how well a model assigns observations to discrete categories (e.g. High/Medium/Low revenue). They cannot be applied to a continuous numeric target like revenue. RMSE and R2 are the regression equivalents.
-
----
-
 ## Key Findings
 
 1. **Seasonality drives revenue.** Month and quarter consistently rank as the most important features, confirming predictable seasonal peaks aligned with gifting occasions (Valentine's Day, Easter, Christmas).
