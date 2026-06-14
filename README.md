@@ -152,8 +152,3 @@ Four regression models are trained and compared:
 - **Model deployment:** Wrap the trained model in a FastAPI REST endpoint or Streamlit dashboard for real-time revenue scoring by the operations team.
 - **Automated retraining pipeline:** Schedule monthly retraining as new transaction data accumulates.
 
-
-
-## License
-
-MIT License
